@@ -6,6 +6,9 @@
     <?php if ($description = option('description')): ?>
     <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
+	<link rel="icon" 
+      type="image/png" 
+      href="<?php echo img('favicon-96x96.png') ?>" />
 
     <?php
     if (isset($title)) {

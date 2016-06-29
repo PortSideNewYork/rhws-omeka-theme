@@ -12,7 +12,7 @@ function display_recent_neatline_exhibits() {
 	
 	// If we have any to loop, we'll append to $html.
 	if (has_loop_records('NeatlineExhibit')) {
-		$html .= '<ul>';
+		$html .= '<ul id="homepage-text">';
 		 
 		foreach (loop('NeatlineExhibit') as $exhibit) {
 			$html .= '<li>'
