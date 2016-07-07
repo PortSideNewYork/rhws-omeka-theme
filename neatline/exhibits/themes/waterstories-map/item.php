@@ -8,7 +8,10 @@
  * 
  * Initial copy 6/16/16 from Neatline/views/shared/exhibits/item.php
  */
+
 ?>
+<link href="<?php echo css_src('jquery.fancybox'); ?>" media="all" rel="stylesheet" type="text/css" />
+<link href="<?php echo css_src('jquery.fancybox-buttons'); ?>" media="all" rel="stylesheet" type="text/css" />
 
 <!-- First image file. -->
 <?php if (metadata('item', 'has files')): ?>
@@ -22,10 +25,21 @@
 
 <!-- All Files. -->
 <?php if (metadata('item', 'has files')): ?>
-  <h3><?php echo __('Files'); ?></h3>
-  <?php echo files_for_item(
+  <h3>Images</h3>
+  <?php 
+			 echo item_image_gallery(
+			       		array('link' => array('rel' => 'fancyboxgroup1',
+			       							'class' => 'fancybox'),
+			       				'linkWrapper' => array('class' => 'item-image')
+         				),
+			 		'thumbnail'
+         			); 
+
+   /* echo files_for_item(
   		array('imageSize' => 'thumbnail')
-  		); ?>
+  		); 
+  		*/
+  		?>
   <hr />
 <?php endif; ?>
 

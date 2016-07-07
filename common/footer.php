@@ -1,5 +1,11 @@
 </div><!-- end content -->
 
+<?php
+/*echo js_tag('lightbox.min', 'javascripts/vendor');*/
+echo js_tag('jquery.fancybox.pack', 'javascripts/vendor');
+echo js_tag('jquery.fancybox-buttons', 'javascripts/vendor');
+?>
+
 <footer>
 
     <div id="footer-content" class="center-div">
@@ -25,7 +31,15 @@
 <script type="text/javascript">
     jQuery(document).ready(function(){
         Omeka.showAdvancedForm();
-               Omeka.dropDown();
+        Omeka.dropDown();
+
+        jQuery("a.fancybox").fancybox({
+            'loop'          :   false,
+           	helpers         : {
+                title       : { type : 'inside' },
+                buttons	: {}
+           	}
+        });
     });
 </script>
 
@@ -42,15 +56,16 @@
 </script>
 
 <?php 
-  echo js_tag('lightbox.min', 'javascripts/vendor');
+/*  echo js_tag('lightbox.min', 'javascripts/vendor');*/
 ?>
 <!--       'fitImagesInViewport': false,
  -->
-<script>
+<!-- <script>
     lightbox.option({
     	'fitImagesInViewport': true
     })
 </script>
+-->
 
 </body>
 

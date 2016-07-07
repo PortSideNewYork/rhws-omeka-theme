@@ -33,6 +33,8 @@ display_recent_neatline_exhibits(); //defined in custom.php
 </div><!-- end primary -->
 
 <div id="secondary">
+	<!-- 
+
 	<div id="search-container">
 		<h2>Search</h2>
 		<?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
@@ -41,7 +43,8 @@ display_recent_neatline_exhibits(); //defined in custom.php
 		<?php echo search_form(); ?>
 		<?php endif; ?>
 	</div>
-    
+     -->
+
     <?php if (get_theme_option('Display Featured Item') == 1): ?>
     <!-- Featured Item -->
     <div id="featured-item">

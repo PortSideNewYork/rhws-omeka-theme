@@ -1,7 +1,9 @@
 <?php 
 /*queue_js_file('lightbox.min', 'javascripts/vendor');*/
 /*queue_js_file('lightbox-plus-jquery.min', 'javascripts/vendor');*/
-queue_css_file('lightbox');
+/*queue_css_file('lightbox');*/
+queue_css_file('jquery.fancybox');
+queue_css_file('jquery.fancybox-buttons');
 ?>
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
 <div id="primary">
@@ -21,17 +23,25 @@ queue_css_file('lightbox');
 
     <div id="item-images">
          <?php /* echo files_for_item(); */
-			 echo item_image_gallery(
+			 /*echo item_image_gallery(
 			       		array('link' => array('data-lightbox' => 'lightbox'),
 			       				'linkWrapper' => array('class' => 'item-image')
          				),
 			 		'thumbnail'
+         			);*/ 
+			 echo item_image_gallery(
+			       		array('link' => array('rel' => 'fancyboxgroup1',
+			       							'class' => 'fancybox'),
+			       				'linkWrapper' => array('class' => 'item-image')
+         				),
+			 		'thumbnail'
          			); 
-         ?>
+			 ?>
     </div>
 
 
       <hr />
+      
     <?php endif; ?>
 
     <!-- Items metadata -->

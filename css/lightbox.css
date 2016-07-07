@@ -61,7 +61,6 @@ body.lb-disable-scrolling {
 
 .lb-container {
   padding: 4px;
-  overflow: auto;
 }
 
 .lb-loader {

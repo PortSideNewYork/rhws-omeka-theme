@@ -5,9 +5,44 @@ div.element h3 {
 	margin-bottom: 0.25em;
 }
 
+div#wsbody {
+/*	width: auto;
+	padding: 0;
+*/	
+}
+
+div#wsleft {
+	width: 15%;
+	float: left;
+/*
+	height: 798px;
+	position: absolute;
+	*/
+}
+
+div#wsright {
+	float: right;
+	width: 85%;
+}
+
+div.ws_subject {
+	/*background: lightBlue;*/
+	/*list-style: square;*/
+	/*display:list-item;*/
+	margin-bottom: 2px;
+}
+
+div.ws_subject:nth-child(even) {
+	background: lightBlue;
+}
+/*
+div.ws_subject:nth-child(odd) {
+	background: lightGreen;
+}
+*/
 #neatline .element {
 	/* copied from main style.css:*/
-	overflow: hidden;
+	/*overflow: hidden;*/
 	clear: both;
 
 	margin-bottom: 0.5em;	
@@ -19,5 +54,9 @@ div.element h3 {
 	font-size: 1.5em;
 	line-height: normal;
 	color: #900;
+}
+
+div#neatline-narrative {
+	border: 1px solid black;
 }
 

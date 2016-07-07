@@ -239,7 +239,10 @@ header:after {
 }
 
 #search-container {
-  position: relative;
+  /*position: relative;*/
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 #search-container input[type=text], #search-container button {
   border: 1px solid #ccc;
@@ -1490,6 +1493,10 @@ footer nav + p {
   margin-left: 0;
 }
 
+.exhibits p {
+	font-size: 14px;
+}
+
 .exhibit-page-nav {
   color: #fff;
 }
@@ -1815,12 +1822,19 @@ a:hover
 	height: 53px;
 	line-height: 53px;
 }
-#search-container, #featured-collection, #featured-exhibit
+#featured-collection, #featured-exhibit
 {
 	background: #ff4f37;
 	margin-bottom: 50px;
 	padding: 20px;
 }
+/*#search-container
+{
+	background: #ff4f37;
+	margin-bottom: 50px;
+	padding: 20px;
+}
+*/
 h2
 {
 	margin-top: 0;
