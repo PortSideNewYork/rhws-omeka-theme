@@ -6,6 +6,8 @@ Neatline.on('start', function() {
 
 	var map = Neatline.request('MAP:getMap');
 	
+/*
+ * This array is now being set up inside show.php
 	var filterclasses = ['collection_street_names',
 	               'subject_peoples__puerto_ricans',
 	               'subject_atlantic_basin',
@@ -39,7 +41,8 @@ Neatline.on('start', function() {
 	               'subject_recreation',
 	               'subject_social_life'
 	              ];
-
+*/
+	
 	/* Reset to have all items on map */
 	function resetTriggers() {
 /*
@@ -74,15 +77,23 @@ Neatline.on('start', function() {
      *     }
 	 *  });
 	 */
+
+	/** TODO: If user has turned off map overlay, this should not turn it back on.
+	 */
 	
-	for ( let index = 0; index < filterclasses.length; ++index ) {
+	for ( let index = 0; index < filterclasses.length; index++ ) {
 
 			$('.' + filterclasses[index]).click(function() {
 				resetTriggers();
 				Neatline.vent.trigger('setFilter', {
 					key : filterclasses[index],
 					evaluator : function(record) {
-						return record.hasTag(filterclasses[index]);
+						let testvals = ['map', filterclasses[index]]
+						let result = false;
+						for (let valind = 0; valind < testvals.length && ! result; valind++) {
+							result = record.hasTag(testvals[valind]);
+						}
+						return result;
 					}
 				});
 				$('.' + filterclasses[index]).css("font-weight", "bold");

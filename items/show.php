@@ -1,7 +1,4 @@
 <?php 
-/*queue_js_file('lightbox.min', 'javascripts/vendor');*/
-/*queue_js_file('lightbox-plus-jquery.min', 'javascripts/vendor');*/
-/*queue_css_file('lightbox');*/
 queue_css_file('jquery.fancybox');
 queue_css_file('jquery.fancybox-buttons');
 ?>
@@ -16,19 +13,9 @@ queue_css_file('jquery.fancybox-buttons');
     <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
     
     <?php if (metadata('item', 'has files')): ?>
-      <?php 
-  	    /*echo item_image('thumbnail');*/
-        /*echo link_to_item(item_image('thumbnail'), array('data-lightbox' => 'lightboxtop'));*/
-       ?>
 
     <div id="item-images">
          <?php /* echo files_for_item(); */
-			 /*echo item_image_gallery(
-			       		array('link' => array('data-lightbox' => 'lightbox'),
-			       				'linkWrapper' => array('class' => 'item-image')
-         				),
-			 		'thumbnail'
-         			);*/ 
 			 echo item_image_gallery(
 			       		array('link' => array('rel' => 'fancyboxgroup1',
 			       							'class' => 'fancybox'),
@@ -69,11 +56,15 @@ queue_css_file('jquery.fancybox-buttons');
     </div>
     <?php endif;?>
 
-    <!-- The following prints a citation for this item. -->
+    <!-- The following prints a citation for this item. 
+    	SKIP THIS! -->
+    <!-- 
     <div id="item-citation" class="element">
         <h3><?php echo __('Citation'); ?></h3>
         <div class="element-text"><?php echo metadata('item','citation',array('no_escape'=>true)); ?></div>
     </div>
+	 -->
+
        <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
 
 

@@ -1,7 +1,6 @@
 </div><!-- end content -->
 
 <?php
-/*echo js_tag('lightbox.min', 'javascripts/vendor');*/
 echo js_tag('jquery.fancybox.pack', 'javascripts/vendor');
 echo js_tag('jquery.fancybox-buttons', 'javascripts/vendor');
 ?>
@@ -54,18 +53,6 @@ echo js_tag('jquery.fancybox-buttons', 'javascripts/vendor');
   ga('send', 'pageview');
 
 </script>
-
-<?php 
-/*  echo js_tag('lightbox.min', 'javascripts/vendor');*/
-?>
-<!--       'fitImagesInViewport': false,
- -->
-<!-- <script>
-    lightbox.option({
-    	'fitImagesInViewport': true
-    })
-</script>
--->
 
 </body>
 

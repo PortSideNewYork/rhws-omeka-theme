@@ -14,6 +14,7 @@ div#wsbody {
 div#wsleft {
 	width: 15%;
 	float: left;
+	padding-right: 1em;
 /*
 	height: 798px;
 	position: absolute;
